@@ -13,4 +13,10 @@ public class Swagger {
                 .headers("Content-type", "application/json")
                 .body(body).post("/login");
     }
+
+    public void postSignup(File body){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .body(body).post("/signup");
+    }
 }
