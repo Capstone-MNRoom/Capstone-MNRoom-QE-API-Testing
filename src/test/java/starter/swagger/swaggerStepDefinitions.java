@@ -33,4 +33,11 @@ public class swaggerStepDefinitions {
         Swagger.response.then().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(path));
     }
 
+    @When("user send POST signup request with body {string}")
+    public void userSendPOSTSignupRequestWithBody(String bodyName) {
+        //mengambil file json dari folder payload
+        String path = "src/test/resources/payload/" + bodyName;
+        File bodyJson = new File(String.format(path));
+        swagger.postSignup(bodyJson);
+    }
 }
