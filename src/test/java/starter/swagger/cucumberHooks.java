@@ -7,6 +7,6 @@ public class cucumberHooks {
 
     @Before
     public static void beforeAll(){
-        RestAssured.baseURI = "https://virtserver.swaggerhub.com/davidwah/MNROOM/1.0";
+        RestAssured.baseURI = "https://mnroom.capstone.my.id";
     }
 }
