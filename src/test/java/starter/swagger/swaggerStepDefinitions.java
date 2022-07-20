@@ -40,4 +40,9 @@ public class swaggerStepDefinitions {
         File bodyJson = new File(String.format(path));
         swagger.postSignup(bodyJson);
     }
+
+    @When("user send GET users request")
+    public void userSendGETRequest() {
+        swagger.getAllUsers();
+    }
 }
