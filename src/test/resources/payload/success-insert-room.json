@@ -1,0 +1,13 @@
+{
+  "categorys_id": 1,
+  "room_name": "Ruang Haris",
+  "capacity": 50,
+  "hotel_name": "Haris",
+  "rental_price": 500000,
+  "address": "Jl. Buah Batu",
+  "city": "Bubat",
+  "facilitys": [
+    1,
+    2
+  ]
+}
