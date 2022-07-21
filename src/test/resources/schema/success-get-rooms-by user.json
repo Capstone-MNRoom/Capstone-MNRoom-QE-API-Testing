@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "image_room": {
+              "type": "string"
+            },
+            "image_pengelola": {
+              "type": "string"
+            },
+            "room_name": {
+              "type": "string"
+            },
+            "capacity": {
+              "type": "integer"
+            },
+            "hotel_name": {
+              "type": "string"
+            },
+            "rental_price": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username"
+              ]
+            },
+            "Categorys": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "category_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "category_name"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "image_room",
+            "image_pengelola",
+            "room_name",
+            "capacity",
+            "hotel_name",
+            "rental_price",
+            "address",
+            "city",
+            "created_at",
+            "User",
+            "Categorys"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "image_room": {
+              "type": "string"
+            },
+            "image_pengelola": {
+              "type": "string"
+            },
+            "room_name": {
+              "type": "string"
+            },
+            "capacity": {
+              "type": "integer"
+            },
+            "hotel_name": {
+              "type": "string"
+            },
+            "rental_price": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username"
+              ]
+            },
+            "Categorys": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "category_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "category_name"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "image_room",
+            "image_pengelola",
+            "room_name",
+            "capacity",
+            "hotel_name",
+            "rental_price",
+            "address",
+            "city",
+            "created_at",
+            "User",
+            "Categorys"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "image_room": {
+              "type": "string"
+            },
+            "image_pengelola": {
+              "type": "string"
+            },
+            "room_name": {
+              "type": "string"
+            },
+            "capacity": {
+              "type": "integer"
+            },
+            "hotel_name": {
+              "type": "string"
+            },
+            "rental_price": {
+              "type": "integer"
+            },
+            "address": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username"
+              ]
+            },
+            "Categorys": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "category_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "category_name"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "image_room",
+            "image_pengelola",
+            "room_name",
+            "capacity",
+            "hotel_name",
+            "rental_price",
+            "address",
+            "city",
+            "created_at",
+            "User",
+            "Categorys"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}

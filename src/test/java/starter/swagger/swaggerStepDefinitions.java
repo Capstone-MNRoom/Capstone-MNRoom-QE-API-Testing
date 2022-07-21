@@ -41,7 +41,7 @@ public class swaggerStepDefinitions {
         swagger.postSignup(bodyJson);
     }
 
-    @When("I send GET request with set query params")
+    @When("I send GET request rooms")
     public void ISendRequestWithSetQueryParams() {
         swagger.getAllRooms();
     }
@@ -92,5 +92,25 @@ public class swaggerStepDefinitions {
         String path = "src/test/resources/payload/" + gbr;
         File bodyJson = new File(String.format(path));
         swagger.updateImage(idroom, bodyJson);
+    }
+
+    @When("I send GET request with set query params")
+    public void iSendGETRequestWithSetQueryParams() {
+        swagger.getAllRoomsbyQuery();
+    }
+
+    @When("I send GET request with set idcategory as alphanumeric")
+    public void iSendGETRequestWithSetIdcategoryAsAlphanumeric() {
+        swagger.getAllRoomsbyAlphanumQuery();
+    }
+
+    @When("I send GET request with set idcategory as negative number")
+    public void iSendGETRequestWithSetIdcategoryAsNegativeNumber() {
+        swagger.getAllRoomsbyNegativeNumbQuery();
+    }
+
+    @When("I send GET request with set query params that doesnt exist")
+    public void iSendGETRequestWithSetQueryParamsThatDoesntExist() {
+        swagger.getAllRoomsbyDoesntExist();
     }
 }
