@@ -113,4 +113,44 @@ public class swaggerStepDefinitions {
     public void iSendGETRequestWithSetQueryParamsThatDoesntExist() {
         swagger.getAllRoomsbyDoesntExist();
     }
+
+    @When("I send GET request room facility with id room {int}")
+    public void iSendGETRequestRoomFacilityWithIdRoom(int idroom) {
+        swagger.getRoomFacility(idroom);
+    }
+
+    @When("I send GET request room facility with id room {string}")
+    public void iSendGETRequestRoomFacilityWithIdRoom(String idroom) {
+        swagger.getRoomFacilityIdAlphanum(idroom);
+    }
+
+    @When("I send GET request all facility")
+    public void iSendGETRequestAllFacility() {
+        swagger.getAllFacility();
+    }
+
+    @When("I send GET request id facility by set params")
+    public void iSendGETRequestIdFacilityBySetParams() {
+        swagger.getFacilityValidId();
+    }
+
+    @When("I send GET request id facility as negative num")
+    public void iSendGETRequestIdFacilityAsNegativeNum() {
+        swagger.getFacilityIdNegative();
+    }
+
+    @When("I send GET request id facility as alphanumeric")
+    public void iSendGETRequestIdFacilityAsAlphanumeric() {
+        swagger.getFacilityIdAlphanum();
+    }
+
+    @When("I send GET request id facility doesn't exist")
+    public void iSendGETRequestIdFacilityDoesnTExist() {
+        swagger.getFacilityIdDoesntExist();
+    }
+
+    @When("I send GET request id facility as special char")
+    public void iSendGETRequestIdFacilityAsSpecialChar() {
+        swagger.getFacilityIdSpecChar();
+    }
 }
