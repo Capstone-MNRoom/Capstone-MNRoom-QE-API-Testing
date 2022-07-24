@@ -23,6 +23,8 @@ public class Swagger {
         response.prettyPrint();
     }
 
+
+    //--------------USERS----------------
     public void getAllUsers() {
         response = RestAssured.given()
                 .headers("Authorization", "Bearer " + token)
@@ -31,6 +33,115 @@ public class Swagger {
 
     }
 
+    public void getUserProfile() {
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/users/profile");
+        response.prettyPrint();
+
+    }
+
+    public void updateUserProfile(String keyImage, String valueImage, String keyUsername, String valueUsername, String keyPassword, String valuePassword, String keyAddress, String valueAddress) {
+        String path = "src/test/resources/payload/" + valueImage;
+        File bodyJson = new File(String.format(path));
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyImage, bodyJson)
+                .formParams(keyUsername, valueUsername)
+                .formParams(keyPassword, valuePassword)
+                .formParams(keyAddress, valueAddress)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updateUserNoImage(String keyUsername, String valueUsername, String keyPassword, String valuePassword, String keyAddress, String valueAddress){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyUsername, valueUsername)
+                .formParams(keyPassword, valuePassword)
+                .formParams(keyAddress, valueAddress)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updateUsernameOnly(String keyUsername, String valueUsername){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyUsername, valueUsername)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updateImageOnly(String keyImage, String valueImage){
+        String path = "src/test/resources/payload/" + valueImage;
+        File bodyJson = new File(String.format(path));
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyImage, bodyJson)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updatePasswordOnly(String keyPassword, String valuePassword){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyPassword, valuePassword)
+                .put("/users");
+        response.prettyPrint();
+    }
+    public void updateImageAndUsername(String keyImage, String valueImage, String keyUsername, String valueUsername){
+        String path = "src/test/resources/payload/" + valueImage;
+        File bodyJson = new File(String.format(path));
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyImage, bodyJson)
+                .formParams(keyUsername, valueUsername)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updateUsernameAndPassword(String keyUsername, String valueUsername, String keyPassword, String valuePassword){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyUsername, valueUsername)
+                .formParams(keyPassword, valuePassword)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updateImageAndPassword(String keyImage, String valueImage, String keyPassword, String valuePassword){
+        String path = "src/test/resources/payload/" + valueImage;
+        File bodyJson = new File(String.format(path));
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyImage, bodyJson)
+                .formParams(keyPassword, valuePassword)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+
+    public void updateUsernameInvalid(String keyUsername, String valueUsername){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyUsername, valueUsername)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void updatePasswordInvalid(String keyPassword, String valuePassword){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .multiPart(keyPassword, valuePassword)
+                .put("/users");
+        response.prettyPrint();
+    }
+
+    public void deleteUserValidId(){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .delete("/users/");
+    }
 
     //--------------ROOMS----------------
     public void getAllRooms(){

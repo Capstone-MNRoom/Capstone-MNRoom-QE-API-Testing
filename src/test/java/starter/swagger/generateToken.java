@@ -41,4 +41,30 @@ public class generateToken {
         JsonPath jsonPath = response.jsonPath();
         Swagger.token = jsonPath.get("token");
     }
+
+    @Before("@login-3")
+    public void getTokenUsers(){
+        String path = "src/test/resources/payload/success-login-3.json";
+        File bodyJson = new File(String.format(path));
+        Response response = RestAssured.given().header("Content-type", "application/json")
+                .body(bodyJson)
+                .post("/login");
+        JsonPath jsonPath = response.jsonPath();
+        Swagger.token = jsonPath.get("token");
+    }
+
+    @Before("@login-4")
+    public void getTokenUsers1(){
+        String path = "src/test/resources/payload/success-login-4.json";
+        File bodyJson = new File(String.format(path));
+        Response response = RestAssured.given().header("Content-type", "application/json")
+                .body(bodyJson)
+                .post("/login");
+        JsonPath jsonPath = response.jsonPath();
+        Swagger.token = jsonPath.get("token");
+    }
+
+
+
+
 }
