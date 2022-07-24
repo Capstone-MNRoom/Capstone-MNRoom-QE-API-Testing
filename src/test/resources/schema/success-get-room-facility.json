@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username"
+              ]
+            },
+            "Rooms": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "room_name": {
+                  "type": "string"
+                },
+                "hotel_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "room_name",
+                "hotel_name"
+              ]
+            },
+            "Facilitys": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "created_at",
+            "User",
+            "Rooms",
+            "Facilitys"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username"
+              ]
+            },
+            "Rooms": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "room_name": {
+                  "type": "string"
+                },
+                "hotel_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "room_name",
+                "hotel_name"
+              ]
+            },
+            "Facilitys": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "created_at",
+            "User",
+            "Rooms",
+            "Facilitys"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}

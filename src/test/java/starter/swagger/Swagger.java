@@ -232,4 +232,54 @@ public class Swagger {
                 .headers("Authorization", "Bearer " + token)
                 .delete("/rooms/" + idroom);
     }
+
+    //--------------FACILITY----------------
+    public void getRoomFacility(int idroom){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/rooms/" + idroom + "/facility");
+    }
+
+    public void getRoomFacilityIdAlphanum(String idroom){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/rooms/" + idroom + "/facility");
+    }
+
+    public void getAllFacility(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys");
+    }
+
+    public void getFacilityValidId(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys/1");
+    }
+
+    public void getFacilityIdNegative(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys/-1");
+    }
+
+    public void getFacilityIdAlphanum(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys/satu");
+    }
+
+    public void getFacilityIdDoesntExist(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys/100");
+    }
+
+    public void getFacilityIdSpecChar(){
+        response = RestAssured.given()
+                .headers("Content-type", "application/json")
+                .get("/facilitys/@#$");
+    }
+
 }

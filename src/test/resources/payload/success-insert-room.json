@@ -1,13 +1,14 @@
 {
-  "categorys_id": 1,
-  "room_name": "Ruang Haris",
+  "categorys_id": 3,
+  "room_name": "Ruang Batur",
   "capacity": 50,
-  "hotel_name": "Haris",
+  "hotel_name": "Laweyan",
   "rental_price": 500000,
   "address": "Jl. Buah Batu",
   "city": "Bubat",
   "facilitys": [
     1,
-    2
+    2,
+    3
   ]
 }
