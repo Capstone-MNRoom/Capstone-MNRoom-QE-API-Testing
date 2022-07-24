@@ -113,4 +113,69 @@ public class swaggerStepDefinitions {
     public void iSendGETRequestWithSetQueryParamsThatDoesntExist() {
         swagger.getAllRoomsbyDoesntExist();
     }
+
+    @When("user send GET request users")
+    public void userSendGETRequestUsers() {
+        swagger.getAllUsers();
+    }
+
+    @When("user send GET request user profile")
+    public void userSendGETRequestUserProfile() {
+        swagger.getUserProfile();
+    }
+
+
+    @When("user send PUT update request with {string} is {string}, {string} is {string}, {string} is {string}")
+    public void userSendPUTUpdateRequestWithIsIsIs(String keyUsername, String valueUsername, String keyPassword, String valuePassword, String keyAddress, String valueAddress) {
+        swagger.updateUserNoImage(keyUsername, valueUsername, keyPassword, valuePassword, keyAddress, valueAddress);
+    }
+    @When("user send PUT update request with {string} is {string}, {string} is {string}, {string} is {string}, {string} is {string}")
+    public void userSendPUTUpdateRequestWithIsIsIsIs(String keyImage, String valueImage, String keyUsername, String valueUsername, String keyPassword, String valuePassword, String keyAddress, String valueAddress) {
+        swagger.updateUserProfile(keyImage, valueImage, keyUsername, valueUsername, keyPassword, valuePassword, keyAddress, valueAddress);
+    }
+
+    @When("user send PUT update request username only with {string} is {string}")
+    public void userSendPUTUpdateRequestUsernameOnlyWithIs(String keyUsername, String valueUsername) {
+        swagger.updateUsernameOnly(keyUsername, valueUsername);
+    }
+
+    @When("user send PUT update request image only with {string} is {string}")
+    public void userSendPUTUpdateRequestImageOnlyWithIs(String keyImage, String valueImage) {
+        swagger.updateImageOnly(keyImage, valueImage);
+    }
+
+    @When("user send PUT update request password only with {string} is {string}")
+    public void userSendPUTUpdateRequestPasswordOnlyWithIs(String keyPassword, String valuePassword) {
+        swagger.updatePasswordOnly(keyPassword, valuePassword);
+    }
+    @When("user send PUT update request image and username only with {string} is {string}, {string} is {string}")
+    public void userSendPUTUpdateRequestImageAndUsernameOnlyWithIsIs(String keyImage, String valueImage, String keyUsername, String valueUsername) {
+        swagger.updateImageAndUsername(keyImage, valueImage, keyUsername, valueUsername);
+    }
+
+    @When("user send PUT update request username and password only with {string} is {string}, {string} is {string}")
+    public void userSendPUTUpdateRequestUsernameAndPasswordOnlyWithIsIs(String keyUsername, String valueUsername, String keyPassword, String valuePassword) {
+        swagger.updateUsernameAndPassword(keyUsername, valueUsername, keyPassword, valuePassword);
+    }
+
+    @When("user send PUT update request image and password only with {string} is {string}, {string} is {string}")
+    public void userSendPUTUpdateRequestImageAndPasswordOnlyWithIsIs(String keyImage, String valueImage, String keyPassword, String valuePassword) {
+        swagger.updateImageAndPassword(keyImage, valueImage, keyPassword, valuePassword);
+    }
+
+    @When("user send PUT update request username with {string} is {string}")
+    public void updateUsernameInvalid(String keyUsername, String valueUsername) {
+        swagger.updateUsernameInvalid(keyUsername, valueUsername);
+    }
+
+    @When("user send PUT update request password with {string} is {string}")
+    public void updatePasswordInvalid(String keyPassword, String valuePassword) {
+        swagger.updatePasswordInvalid(keyPassword, valuePassword);
+    }
+
+
+    @When("user send DEL request to delete user")
+    public void userSendDELRequestToDeleteUser() {
+        swagger.deleteUserValidId();
+    }
 }
