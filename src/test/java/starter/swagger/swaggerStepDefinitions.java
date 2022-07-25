@@ -224,4 +224,24 @@ public class swaggerStepDefinitions {
         File bodyJson = new File(String.format(path));
         swagger.postRent(bodyJson);
     }
+
+
+
+    @When("user send GET request categories")
+    public void userSendGETRequestCategories() {
+        swagger.getAllCategories();
+    }
+
+    @When("user send GET request categories by id with {int}")
+    public void userSendGETRequestCategoriesByIdWith(int idCategories) {
+        swagger.getCategoriesById(idCategories);
+    }
+
+    @When("user send GET request categories by id with {string}")
+    public void userSendGETRequestCategoriesByIdWith(String idCategories) {
+        swagger.getCategoriesInvalidId(idCategories);
+    }
+
+
+
 }

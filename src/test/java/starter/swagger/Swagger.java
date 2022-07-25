@@ -292,4 +292,21 @@ public class Swagger {
     }
 
 
+    //--------------CATEGORIES----------------
+
+    public void getAllCategories() {
+        response = RestAssured.get("/categorys");
+    }
+
+    public void getCategoriesById(int idCategories) {
+        response = RestAssured.get("/categorys/" + idCategories);
+    }
+
+    public void getCategoriesInvalidId(String idCategories){
+        response = RestAssured.get("/categorys/" + idCategories);
+    }
+
+
+
+
 }
