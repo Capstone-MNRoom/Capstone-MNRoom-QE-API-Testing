@@ -307,6 +307,27 @@ public class Swagger {
     }
 
 
+    //--------------PAYMENT----------------
+
+    public void postPayment(File body) {
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .headers("Content-type", "application/json")
+                .body(body).post("/rents");
+        response.prettyPrint();
+    }
+
+    public void getPayment(){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/payment");
+    }
+
+    public void getPaymentNoLogin(){
+        response = RestAssured.given().get("/payment");
+    }
+
+
 
 
 }

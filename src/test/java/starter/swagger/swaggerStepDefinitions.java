@@ -243,5 +243,20 @@ public class swaggerStepDefinitions {
     }
 
 
+    @When("user send POST payment request with body {string}")
+    public void userSendPOSTPaymentRequestWithBody(String bodyName) {
+        String path = "src/test/resources/payload/" + bodyName;
+        File bodyJson = new File(String.format(path));
+        swagger.postPayment(bodyJson);
+    }
 
+    @When("user send GET request payment")
+    public void userSendGETRequestPayment() {
+        swagger.getPayment();
+    }
+
+    @When("user send GET request payment without login")
+    public void userSendGETRequestPaymentWithoutLogin() {
+        swagger.getPaymentNoLogin();
+    }
 }
