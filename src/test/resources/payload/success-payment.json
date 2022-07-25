@@ -1,0 +1,8 @@
+{
+  "order_id": "MN-2022-01",
+  "payment_type": "transfer",
+  "bank_transfer": "BCA",
+  "gross_amount": 3000000,
+  "va_number": 98690764630,
+  "transaction_status": "pending"
+}
