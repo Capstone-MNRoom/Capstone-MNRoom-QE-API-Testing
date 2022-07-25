@@ -178,7 +178,7 @@ public class Swagger {
     public void getAllRoomsbyDoesntExist(){
         response = RestAssured.given()
                 .headers("Content-type", "application/json")
-                .queryParam("idcategory", 10)
+                .queryParam("idcategory", 1001)
                 .queryParam("page", 1)
                 .get("/rooms");
     }

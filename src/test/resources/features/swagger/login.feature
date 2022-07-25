@@ -2,7 +2,7 @@
 Feature:Login
 
 
-  @post-login @positive @login
+  @post-login @positive
   Scenario: Login successfully
     When user send POST login request with body "success-login.json"
     Then response status code should be 200
