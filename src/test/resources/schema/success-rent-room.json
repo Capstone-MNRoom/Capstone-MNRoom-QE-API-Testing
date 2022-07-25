@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "transaction_id": {
+          "type": "string"
+        },
+        "payment_type": {
+          "type": "string"
+        },
+        "order_id": {
+          "type": "string"
+        },
+        "bank_transfer": {
+          "type": "string"
+        },
+        "gross_amount": {
+          "type": "integer"
+        },
+        "va_number": {
+          "type": "string"
+        },
+        "transaction_status": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "transaction_id",
+        "payment_type",
+        "order_id",
+        "bank_transfer",
+        "gross_amount",
+        "va_number",
+        "transaction_status",
+        "created_at"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}

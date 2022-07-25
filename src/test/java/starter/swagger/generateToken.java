@@ -64,6 +64,18 @@ public class generateToken {
         Swagger.token = jsonPath.get("token");
     }
 
+    @Before("@login-5")
+    public void getTokenUserRent(){
+        String path = "src/test/resources/payload/success-login-5.json";
+        File bodyJson = new File(String.format(path));
+        Response response = RestAssured.given().header("Content-type", "application/json")
+                .body(bodyJson)
+                .post("/login");
+        JsonPath jsonPath = response.jsonPath();
+        Swagger.token = jsonPath.get("token");
+    }
+
+
 
 
 
