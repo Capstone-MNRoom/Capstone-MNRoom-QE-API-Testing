@@ -217,4 +217,11 @@ public class swaggerStepDefinitions {
     public void userSendDELRequestToDeleteUser() {
         swagger.deleteUserValidId();
     }
+
+    @When("user send POST rent request with body {string}")
+    public void userSendPOSTRentRequestWithBody(String bodyName) {
+        String path = "src/test/resources/payload/" + bodyName;
+        File bodyJson = new File(String.format(path));
+        swagger.postRent(bodyJson);
+    }
 }

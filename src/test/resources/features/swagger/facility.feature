@@ -41,7 +41,7 @@ Feature: Facility
 #  -----------GET ROOM FACILITY------------
   @get-room-facility @positive @login-1
   Scenario: Successfully get room facility
-    When I send GET request room facility with id room 85
+    When I send GET request room facility with id room 86
     Then response status code should be 200
     And response body should be equal with jsonSchema "success-get-room-facility.json"
 

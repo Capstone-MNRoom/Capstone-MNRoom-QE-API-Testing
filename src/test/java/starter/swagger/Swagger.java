@@ -282,4 +282,14 @@ public class Swagger {
                 .get("/facilitys/@#$");
     }
 
+    //--------------RENT----------------
+    public void postRent(File body) {
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .headers("Content-type", "application/json")
+                .body(body).post("/rents");
+        response.prettyPrint();
+    }
+
+
 }
