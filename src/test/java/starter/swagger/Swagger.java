@@ -327,6 +327,26 @@ public class Swagger {
         response = RestAssured.given().get("/payment");
     }
 
+    //--------------FEEDBACK----------------
+    public void postFeedback(File body, int idRoom) {
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .headers("Content-type", "application/json")
+                .body(body).post("/feedbacks" + idRoom);
+        response.prettyPrint();
+    }
+    public void getFeedbackIdAsInteger(int idRoom){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/payment" + idRoom);
+    }
+    public void getFeedbackInvalidId(String idRoom){
+        response = RestAssured.given()
+                .headers("Authorization", "Bearer " + token)
+                .get("/payment" + idRoom);
+    }
+
+
 
 
 

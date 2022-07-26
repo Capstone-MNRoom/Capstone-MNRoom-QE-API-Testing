@@ -99,7 +99,7 @@ Feature: rooms
 #  --------DELETE ROOM BY ID-----------
   @delete-room-by-id @positive @login-1
   Scenario: Successfully delete room by id
-    When I send DELETE request by id 85
+    When I send DELETE request by id 87
     Then response status code should be 200
     And response body should be equal with jsonSchema "success-delete-room.json"
 

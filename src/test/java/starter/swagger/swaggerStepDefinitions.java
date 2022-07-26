@@ -259,4 +259,23 @@ public class swaggerStepDefinitions {
     public void userSendGETRequestPaymentWithoutLogin() {
         swagger.getPaymentNoLogin();
     }
+
+    @When("user send POST feedback request with body {string} and id room {int}")
+    public void userSendPOSTFeedbackRequestWithBodyAndIdRoom(String bodyName, int idRoom) {
+        String path = "src/test/resources/payload/" + bodyName;
+        File bodyJson = new File(String.format(path));
+        swagger.postFeedback(bodyJson, idRoom);
+    }
+
+
+    @When("user send GET feedback request with id room {string}")
+    public void userSendGETFeedbackRequestWithIdRoom(String idRoom) {
+        swagger.getFeedbackInvalidId(idRoom);
+    }
+
+    @When("user send GET feedback request with id room {int}")
+    public void userSendGETFeedbackRequestWithIdRoom(int idRoom) {
+        swagger.getFeedbackIdAsInteger(idRoom);
+    }
+
 }
